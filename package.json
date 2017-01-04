@@ -6,7 +6,7 @@
     "start": "./node_modules/.bin/babel-node --presets react,es2015 server.js"
   },
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "author": "Christopher Sancho",
   "license": "ISC",
