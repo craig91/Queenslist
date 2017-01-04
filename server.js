@@ -12,4 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 
+app.get('/api/tags', (req, res) => {
+  // Do Something
+  //
+});
+
+
+
+
 app.listen(3000);
