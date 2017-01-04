@@ -7,7 +7,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rgrjs/rgrjs.com.git"
   },
   "author": "Christopher Sancho",
   "license": "ISC",
