@@ -1,7 +1,7 @@
 {
-  "name": "rgrjs",
+  "name": "express-webpack",
   "version": "1.0.0",
-  "description": "A collection of educational resources about React, GraphQL, and Relay",
+  "description": "A Quick Setup For React, GraphQL, and Relay",
   "scripts": {
     "start": "./node_modules/.bin/babel-node --presets react,es2015 server.js"
   },
@@ -9,12 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/rgrjs/rgrjs.com.git"
   },
-  "author": "",
+  "author": "Christopher Sancho",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rgrjs/rgrjs.com/issues"
-  },
-  "homepage": "https://github.com/rgrjs/rgrjs.com#readme",
   "dependencies": {
     "babel": "^6.3.13",
     "babel-cli": "^6.3.15",
