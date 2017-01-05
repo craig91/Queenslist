@@ -1,3 +1,4 @@
 node_modules/
 bundle.js*
-db-connection.js
+sequelize-connnection.js
+package.json
