@@ -45,9 +45,6 @@ Post.sync({force: true})
 })
 //the following Post should NOT be added to your database:
 //(if your validations are setup correctly)
-.then(() => Post.bulkCreate([
-  {title: ''},
-  {title: ['artist1', 'artist2']},
-], {validate: true}))
+
 // if everything is correct, you should only have THREE artists in your database
 .catch((err) => console.log(err));
