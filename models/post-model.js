@@ -1,24 +1,19 @@
 const Sequelize = require('sequelize');
 const sequelizeConnection = require('../sequelize-connection');
+const Tag = require('./tag-model.js');
 
-const PostModel = sequelizeConnection.define('post', {
+const Post = sequelizeConnection.define('post', {
   category: {
     type: Sequelize.STRING,
     validate: {
       notEmpty: true
     }
   },
-  tags: {
-    type: Sequelize.STRING,
-    validate: {
-      isArray: true
-    }
-  },
   title: {
     type: Sequelize.STRING,
     validate: {
-      notEmpty: true
-      len: [1, 120]
+      notEmpty: true,
+      len: [1, 1000]
     }
   },
   description: {
@@ -27,19 +22,16 @@ const PostModel = sequelizeConnection.define('post', {
       len: [0, 10000]
     }
   },
-  images: {
-    type: Sequelize.STRING,
-    validate: {
-      isArray: true
-    }
-  },
   email: {
     type: Sequelize.STRING,
     validate: {
-      notEmpty: true
+      notEmpty: true,
       isEmail: true
     }
   }
 })
 
-module.exports = PostModel
+Tag.belongsToMany(Post, {through: 'postTag', foreignKey: 'tagId'});
+Post.belongsToMany(Tag, {through: 'postTag', foreignKey: 'postId'});
+
+module.exports = Post;

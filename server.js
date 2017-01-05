@@ -1,3 +1,4 @@
+
 const express = require('express');
 const Sequelize = require('sequelize');
 const sequelizeConnection = require('./sequelizeConnection');
