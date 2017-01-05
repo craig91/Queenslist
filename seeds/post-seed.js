@@ -17,7 +17,7 @@ Post.sync({force: true})
 ))
 .then((post) => {
   //use an automatically created 'accessor' method (addTags) to add the tags
-  post.addTags([1, 2])
+  post.addTags([0])
 })
 .then(() => Post.create(
   {
@@ -29,7 +29,7 @@ Post.sync({force: true})
   }
 ))
 .then((post) => {
-  post.addTags([1])
+  post.addTags([0,1])
 })
 .then(() => Post.create(
   {
@@ -45,9 +45,9 @@ Post.sync({force: true})
 })
 //the following Post should NOT be added to your database:
 //(if your validations are setup correctly)
-// .then(() => Post.bulkCreate([
-//   {title: ''},
-//   {title: ['artist1', 'artist2']},
-// ], {validate: true}))
+.then(() => Post.bulkCreate([
+  {title: ''},
+  {title: ['artist1', 'artist2']},
+], {validate: true}))
 // if everything is correct, you should only have THREE artists in your database
 .catch((err) => console.log(err));
