@@ -6,9 +6,9 @@ const Tag = require('../models/tag-model');
 Tag.sync({force: true})
 //add the following three tags to the database:
 .then(() => Tag.bulkCreate([
-  {title: 'cars'},
-  {title: 'cheap'},
-  {title: 'brownstone'},
+  {title: 'cars', counter: 2},
+  {title: 'cheap', counter: 1},
+  {title: 'brownstone', counter: 1},
 ], {validate: true}))
 //the following tag should NOT be added to your database:
 //(if your validations are setup correctly)

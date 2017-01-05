@@ -13,7 +13,7 @@ const Post = sequelizeConnection.define('post', {
     type: Sequelize.STRING,
     validate: {
       notEmpty: true,
-      len: [1, 1000]
+      len: [1, 500]
     }
   },
   description: {
@@ -21,6 +21,10 @@ const Post = sequelizeConnection.define('post', {
     validate: {
       len: [0, 10000]
     }
+  },
+  images : {
+    type: Sequelize.ARRAY(Sequelize.TEXT)
+
   },
   email: {
     type: Sequelize.STRING,
