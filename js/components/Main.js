@@ -5,7 +5,14 @@ import {connect} from 'react-redux';
 export class Main extends React.Component {
   render() {
     console.log(this.props)
-    return <h3>Hello React!</h3>;
+    return (
+      <div>
+        <h3>Queens List</h3>
+
+        {this.props.children}
+        
+      </div>
+    );
   }
 }
 
