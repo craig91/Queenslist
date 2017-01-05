@@ -9,10 +9,11 @@ Tag.sync({force: true})
   {title: 'cars'},
   {title: 'cheap'},
   {title: 'brownstone'},
+  {title: 'selling'}
 ], {validate: true}))
 //the following tag should NOT be added to your database:
 //(if your validations are setup correctly)
-.then(() => Tag.create({title: ''}))
-.then(() => Tag.create({title: ['sdsd', 'genrsadfse2']}))
+// .then(() => Tag.create({title: ''}))
+// .then(() => Tag.create({title: ['sdsd', 'genrsadfse2']}))
 // if everything is correct, you should only have THREE tags in your database
 .catch((err) => console.log(err));

@@ -5,9 +5,10 @@ const sequelizeConnection = require('../sequelize-connection');
 // YOUR CODE HERE:
 //////////
 const Tag = sequelizeConnection.define('tag', {
-  title: {type: Sequelize.STRING,
+  title: {
+          type: Sequelize.STRING,
           validate: {
-            len: [1, 1000]
+            len: [1, 255]
           }
   }
 })
