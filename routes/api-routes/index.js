@@ -32,4 +32,19 @@ router.route('/findModels')
   })
 })
 
+router.route('/findCategory/:category')
+.get((req, res) => {
+  PostModel.findAll({
+    include: [TagModel],
+    where: {category: req.params.category}
+  })
+  .then((data) => {
+    res.send(data)
+  })
+  .catch((err) => {
+    console.log(err)
+    res.sendStatus(500)
+  })
+})
+
 module.exports = router

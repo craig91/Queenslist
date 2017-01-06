@@ -6,14 +6,14 @@ import {Link} from 'react-router';
 import {fetchposts} from '../actions/index';
 
 
-class BuyComponent extends Component {
+class RentComponent extends Component {
   componentDidMount() {
-    this.props.fetchposts('buy')
+    this.props.fetchposts('rent')
   }
   render() {
     return(
       <div>
-        <Link to='/'>Home</Link>
+        <Link to='/'>HOME</Link>
       </div>
     )
   }
@@ -23,4 +23,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({fetchposts}, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(BuyComponent);
+export default connect(null, mapDispatchToProps)(RentComponent);

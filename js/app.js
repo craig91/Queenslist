@@ -1,23 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {Provider} from 'react-redux';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {Router, browserHistory} from 'react-router';
 
 import store from './store/configureStore';
-
-// react components
-import Main from './components/Main';
-import BuyComponent from './components/BuyComponent';
+import routes from './routes';
 
 
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path='/' component={Main}>
-        <IndexRoute component={Buy}/>
-      </Route>
-    </Router>
+    <Router history={browserHistory} routes={routes} />
   </Provider>
   , document.getElementById('react')
   );

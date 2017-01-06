@@ -6,9 +6,9 @@ import {Link} from 'react-router';
 import {fetchposts} from '../actions/index';
 
 
-class BuyComponent extends Component {
+class SellComponent extends Component {
   componentDidMount() {
-    this.props.fetchposts('buy')
+    this.props.fetchposts('sell')
   }
   render() {
     return(
@@ -23,4 +23,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({fetchposts}, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(BuyComponent);
+export default connect(null, mapDispatchToProps)(SellComponent);
