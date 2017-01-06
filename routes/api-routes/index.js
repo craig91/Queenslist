@@ -21,7 +21,8 @@ router.route('/findTag/:tagname')
 router.route('/findModels')
 .get((req, res) => {
   PostModel.findAll({
-    include: [{model: TagModel, where: {title: ['cars', 'cheap']}}]
+    where: { $and: [{title: 'cheap'}, {title: 'cars'}]},
+    include: [{model: TagModel}]
   })
   .then((data) => {
     res.send(data)
