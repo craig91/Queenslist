@@ -2,27 +2,21 @@ html{
 
 }
 
-#leftbar{
-    background: #f4f4f4;
-    border-left: 1px #ccc solid;
-    border-right: 1px #ccc solid;
-    float: left;
-    min-width: 10em;
-    font-size: smaller;
-    margin: 0;
-    min-height: 860px;
-    text-align: center;
-    width: 20%;
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
 }
 
-#logo{
-    font-size: 235%;
-    line-height: 135%;
-    font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
+input[type=text]:focus {
     width: 100%;
-}
-
-#logo a{
-    text-decoration: none;
 }
