@@ -4,11 +4,11 @@ html{
 }
 
 input[type=text] {
-    width: 130px;
+    width: 300px;
     margin-top: 4%;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 25px;
     font-size: 16px;
     background-color: white;
     background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png');
